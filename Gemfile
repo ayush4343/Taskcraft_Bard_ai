@@ -58,3 +58,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'httparty'
 gem 'json'
 gem 'rack-cors'
+gem 'dotenv-rails', groups: [:development, :test]

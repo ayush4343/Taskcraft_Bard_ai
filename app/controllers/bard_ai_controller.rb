@@ -6,7 +6,7 @@ class BardAiController < ApplicationController
   skip_before_action :verify_authenticity_token
 
   def process_text
-    api_key = Rails.application.credentials.bard_ai_api_key
+    api_key =  ENV['BARD_API_KEY']
     api_url = "https://generativelanguage.googleapis.com/v1beta2/models/text-bison-001:generateText?key=#{api_key}" # Replace with Bard AI API endpoint
 
     response = HTTParty.post(
